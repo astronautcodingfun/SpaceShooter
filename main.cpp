@@ -12,10 +12,10 @@ int main()
 
 	float currentFrame;
 
-	Texture t1, t3;
+	Texture t1, t2, t3;
 
 	t1.loadFromFile("courseSFML/resources/black.png");
-
+	t2.loadFromFile("courseSFML/resources/spaceShooterEnemyTransparent.png");
 	t3.loadFromFile("courseSFML/resources/SpaceShipTransparent.png");
 
 	t1.setRepeated(true);
@@ -49,10 +49,10 @@ int main()
 	projectiles2.push_back(CircleShape(projectile2));
 
 	//enemy
-	RectangleShape enemy;
-	enemy.setFillColor(Color::Magenta);
-	enemy.setSize(Vector2f(50.f, 50.f));
-
+	RectangleShape enemy; 
+	enemy.setTexture(&t2);
+	//enemy.setFillColor(Color::Magenta);
+	enemy.setSize(Vector2f(60.f, 60.f));
 
 	std::vector<RectangleShape> enemies;
 	enemies.push_back(RectangleShape(enemy));
